@@ -16,6 +16,8 @@
 
 Respository's URL: [https://github.com/pawanpoudyel/waph-pawanpoudyel.git](https://github.com/pawanpoudyel/waph-pawanpoudyel.git)
 
+Public Respository's URL: [https://pawanpoudyel.github.io/](https://pawanpoudyel.github.io/)
+
 This is a private repository for Pawan Poudyel to store all code from the course. The organization of this repository is as follows.
 
 ### Labs 
@@ -32,6 +34,8 @@ Hands-on hacking exercises
 
 ### Individual Projects
 
+- [Personal Page](/index.html): Personal Project 1
+
 ### Team Project
 
 # Lab 2 - Front-end Web Development 
@@ -43,9 +47,9 @@ Using javascript we will run some basic javascript functions and get the for exa
 the lab we will use ajax to run GET and POST API requests asynchronously. We will also format our html website using CSS.
 Finally we will integrate a Web API using ajax to display a random joke.
 
-[https://github.com/pawanpoudyel/waph-pawanpoudyel/tree/main/labs/lab2](https://github.com/pawanpoudyel/waph-pawanpoudyel/tree/main/labs/lab2).
+[https://github.com/pawanpoudyel/pawanpoudyel.github.io](https://github.com/pawanpoudyel/pawanpoudyel.github.io).
 
-### Task 1: Basic HTML with forms, and JavaScript 
+### Task 1: Technical Page Requirements 1
 
 I created a file called waph-poudyepn.html and wrote basic html code to make a website that displays my information, has forms,
 a button to show my email, and the date and time. For the forms the php file from lab1 was reused.
@@ -69,7 +73,7 @@ Image shows the clock and email on the website
 
 ![Displayed clock and email on html website using javascript](images/screenshot2.1_outcome.png)
 
-### Task 2: Ajax, CSS, jQuery, and Web API integration
+### Task 2: Technical Page Requirements 2
 
 In task 2, I used an ajax javascript script in html to get and print out when the user preses down on a key and I also
 used the echo.php from lab 1 to send an ajax get request and display the result. Next I used CSS to format my html website
@@ -80,58 +84,17 @@ and used the jQuery library to send GET requests, and did some web API integrati
 
 Here is the code I used to detect and log when a user presses a key
 
-![HTML code with javascript to log when a key is pressed](images/screenshot3.a.png)
+### Task 3: Technical Page Requirements 3
 
-![Example of key being pressed and logged](images/screenshot3.b.png)
+I created a file called waph-poudyepn.html and wrote basic html code to make a website that displays my information, has forms,
+a button to show my email, and the date and time. For the forms the php file from lab1 was reused.
 
-An example of a GET request being sent
+####  a. HTML (5 pts) 
 
-![Example of the GET request being sent and returning a value in div element](images/screenshot3.c.png)
+NOTE: Almost all of the screenshots were taken after completing the lab
 
-
-#### b. CSS (7.5 pts)
-
-This is what the entire website looks like after I formatted it
-
-![Example the website being formatted](images/screenshot4.a.png)
-
-Some of the CSS code I used
-
-![CSS in HTML code example](images/screenshot4.b.png)
-
-Here is the structre of my HTML code and the classes I gave to the divs
-
-![HTML divs with proper classes so it can be formatted](images/screenshot4.c.png)
-
-
-####  c. jQuery (5 pts)
-
-
-
-![Imported jQuery and created the proper buttons with GET and POST requests CODE ](images/screenshot5.a.png)
-
-
-HAHA was sent as a GET request and you can see it on the network tab and you can see that the POST request for HEHE returned 200 OK
-
-![Example of sending GET and POST request on the website with the network tab showing 200 ok for both requests ](images/screenshot5.b.png)
- 
-
-#### d. Web API integration (10 pts)
-
-This is my website generating a random joke and the response I got from jokeapi.dev with the joke
-
-![Website with a random joke gotten from a web API request with network response ](images/screenshot6.a.png)
-
-![Screenshot of code of how I got the joke ](images/screenshot6.b.png)
-
-
-I used the fetch method to get the age of the user and get the count as well
-
-![Screenshot of code of the fetch method to get the age and count ](images/screenshot7.a.png)
-
-Here is the 200 ok reponse I got with the data it returned in the network tab
-
-![Screenshot of website trying to get age and getting a random count with the network tab reponse of age 48 and count 12369 ](images/screenshot7.b.png)
+This is what the html website looks like wiht my info and headshot
+![HTML website with basic info and headshot](images/screenshot1.a.png)
 
 ### Outcomes
 
