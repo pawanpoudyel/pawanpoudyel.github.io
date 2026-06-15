@@ -4,9 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>WAPH-Pawan Poudyel</title>
-
   <style>
     .button {
       background-color: green;
@@ -178,7 +176,6 @@
         <div class="top-bar text-center position-relative">
           <div class="top-bar-inner">
             <a class="btn btn-primary top-bar-cta" href="https://github.com/pawanpoudyel/pawanpoudyel.github.io">Public Repo</a>
-
             <!--links-->
             <ul class="social-list list-inline mx-auto">
               <li class="list-inline-item">
@@ -199,7 +196,6 @@
             </ul>
           </div>
         </div>
-
         <div class="resume-wrapper mx-auto rounded-2">
           <div class="resume-header px-4 px-lg-5">
             <div id="menubar" class="resume-profile-holder text-center">
@@ -207,7 +203,6 @@
                    class="img-circle resume-profile-pic rounded-circle"
                    alt="My headshot"
                    width="150">
-
               <h2 class="resume-name text-uppercase">Pawan Poudyel</h2>
               <div class="resume-role-title text-uppercase">
                 Software Engineer | Resume
@@ -218,6 +213,27 @@
 					document.getElementById('digital-clock').innerHTML = "Current time: " + new Date();
 					}
 					setInterval(displayTime, 500);
+				</script>
+				<div id="visit-message"></div>
+				<script>
+				var lastVisit = "";
+				var cookies = document.cookie.split("; ");
+				for (var i = 0; i < cookies.length; i++) {
+					if (cookies[i].startsWith("lastVisit=")) {
+						lastVisit = decodeURIComponent(cookies[i].substring(10));
+					}
+				}
+				if (lastVisit == "") {
+					document.getElementById("visit-message").innerHTML =
+						"Welcome to my homepage for the first time!";
+				} else {
+					document.getElementById("visit-message").innerHTML =
+						"Welcome back! Your last visit was " + lastVisit;
+				}
+				var currentVisit = new Date();
+				document.cookie =
+					"lastVisit=" + encodeURIComponent(currentVisit) +
+					"; max-age=31536000; path=/";
 				</script>
               <div class="resume-contact mt-4">
                 <ul class="resume-contact-list list-unstyled list-inline mb-0 justify-content-between">
@@ -236,7 +252,6 @@
               </div>
             </div>
           </div>
-
           <div class="resume-body p-4 p-lg-5">
             <div class="row">
               <div id="main" class="col-main col-12 col-lg-8 pe-lg-4">
@@ -250,7 +265,8 @@
 					3 internships so far. I will be doing 2 more internships 
 					before graduating Spring 2028. I have experience working with
 					TypeScript, C#, SQL, Git, and Agile/Scrum. I am currently
-					seeking full time employment opportunities. 
+					seeking full time employment opportunities. This web page was
+					made for Web Application Programming and Hacking.
                   </div>
                 </section>
                 <hr>
@@ -318,7 +334,7 @@
 						<span class="resume-section-heading-icon me-2">
 							<i class="fa-solid fa-user"></i>
 						</span>
-						Age Guesser
+						Age Guesser and Joke
 					</h3>
 					<div>
 						Name: <input id="name" onkeyup="console.log('you have pressed a key')">
@@ -327,7 +343,6 @@
 						<script>
 						function guessAge() {
 							var input = document.getElementById("name").value;
-
 							fetch("https://api.agify.io/?name=" + input)
 							.then(response => response.json())
 							.then(result => {
@@ -336,32 +351,65 @@
 								"Age: " + result.age + "<br>" +
 								"Count: " + result.count;
 							});
-
 							document.getElementById("name").value = "";
 						}
+						</script>
+						<br>
+						<div id="joke">Joke: </div>
+						<script>
+						function getJoke() {
+							$.get("https://v2.jokeapi.dev/joke/Programming?type=single",
+								function(result) {
+									$("#joke").text("Joke: " + result.joke);
+								}
+							);
+						}
+						$(document).ready(function() {
+							getJoke();
+							setInterval(getJoke, 60000);
+						});
 						</script>
 					</div>
 				</section>
               </div>
               <div class="col-12 col-lg-4 ps-lg-4">
-                        <canvas id="analog-clock"
-                                width="100"
-                                height="100"
-                                style="background-color:#999;"></canvas>
-                        <script src="https://waph-phung.github.io/clock.js"></script>
-                        <script>
-                          var canvas = document.getElementById("analog-clock");
-                          var ctx = canvas.getContext("2d");
-                          var radius = canvas.height / 2;
-                          ctx.translate(radius, radius);
-                          radius = radius * 0.90;
-                          setInterval(drawClock, 1000);
-                          function drawClock() {
-                              drawFace(ctx, radius);
-                              drawNumbers(ctx, radius);
-                              drawTime(ctx, radius);
-                          }
-                        </script>
+				<div style="display: flex; align-items: flex-start; gap: 20px;">
+					<div>
+						<i>Random Dog Image</i>
+						<div id="dog-image"></div>
+						<input class="button round" type="button" value="New Dog" onclick="getDog()">
+						<script>
+						function getDog() {
+							fetch("https://dog.ceo/api/breeds/image/random")
+							.then(response => response.json())
+							.then(result => {
+								document.getElementById("dog-image").innerHTML =
+									'<img src="' + result.message + '" style="width: 100px; height: 100px; max-width: 100px; max-height: 100px; object-fit: cover;">';
+							});
+						}
+						getDog();
+						</script>
+					</div>
+					<div>
+						<i>Analog Clock</i>
+						<canvas id="analog-clock" width="100" height="100" style="background-color:#999;"></canvas>
+						<script src="https://waph-phung.github.io/clock.js"></script>
+						<script>
+							var canvas = document.getElementById("analog-clock");
+							var ctx = canvas.getContext("2d");
+							var radius = canvas.height / 2;
+							ctx.translate(radius, radius);
+							radius = radius * 0.90;
+							setInterval(drawClock, 1000);
+
+							function drawClock() {
+								drawFace(ctx, radius);
+								drawNumbers(ctx, radius);
+								drawTime(ctx, radius);
+							}
+						</script>
+					</div>
+				</div>
                 <section class="resume-skills-section resume-section">
                   <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
                     <i class="resume-section-heading-icon bi bi-gear me-2"></i>
