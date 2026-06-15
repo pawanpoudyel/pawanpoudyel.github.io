@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    body {background-color: powderblue;}
-    h1 {color: blue}
-  </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WAPH-Pawan Poudyel</title>
+
   <style>
     .button {
-      background-color: #4CAF50; /* Green */
+      background-color: green;
       border: none;
       color: white;
       padding: 5px;
@@ -24,195 +26,741 @@
     }
 
     #response {
-      background-color: #ff9800; /* Orange */
+      background-color: orange;
     }
   </style>
-  <link rel="stylesheet" href="https://waph-uc.github.io/style1.css">
-  <meta charset="utf-8">
-  <title>WAPH-Pawan Poudyel</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script defer src="assets/fontawesome/js/all.js"></script>
+  <link id="theme-style" rel="stylesheet" href="assets/css/risen.css">
+
+  <style>
+    body {
+      background-color: #19202e;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #ffffff;
+    }
+
+    .resume-wrapper {
+      margin-bottom: 4rem;
+    }
+
+    .resume-profile-pic {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .course-title {
+      font-size: 1.4rem;
+      letter-spacing: 0.05rem;
+    }
+
+    .course-subtitle {
+      color: #a5b3ce;
+      font-size: 1.05rem;
+    }
+
+    #email {
+      color: #629feb;
+      cursor: pointer;
+    }
+
+    #email:hover {
+      text-decoration: underline;
+    }
+
+    .lab-card {
+      background-color: rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      padding: 1.25rem;
+    }
+
+    .lab-card i {
+      color: #ffffff;
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .lab-card form {
+      margin-bottom: 1.5rem;
+    }
+
+    .lab-card input:not([type="button"]):not([type="submit"]) {
+      background-color: #19202e;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0.35rem;
+      color: #ffffff;
+      display: block;
+      margin: 0.5rem 0 1rem;
+      max-width: 100%;
+      padding: 0.65rem;
+      width: 100%;
+    }
+
+    .lab-card input[type="submit"],
+    .resume-wrapper .button {
+      background-color: #fe655c;
+      border: none;
+      border-radius: 2rem;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin: 0.25rem;
+      padding: 0.6rem 1rem;
+    }
+
+    .lab-card input[type="submit"]:hover,
+    .resume-wrapper .button:hover {
+      background-color: #fe4d43;
+    }
+
+    #digital-clock,
+    #date,
+    #joke,
+    #age-response,
+    #response {
+      border-radius: 0.35rem;
+      margin: 0.75rem 0;
+      padding: 0.75rem;
+    }
+
+    #digital-clock,
+    #date,
+    #joke,
+    #age-response {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    #date {
+      color: #629feb;
+      cursor: pointer;
+    }
+
+    #response {
+      color: #19202e;
+      min-height: 2.5rem;
+    }
+
+    #analog-clock {
+      border-radius: 50%;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 991px) {
+      .resume-body .col-main {
+        border-right: none;
+      }
+    }
+  </style>
 </head>
-<div class="container wrapper">
-  <div id="top">
-    <h1>Web Application Programming and Hacking</h1>
-    <h2>Front-end Web Development Lab</h2>
-    <h3>Instructor: Dr. Phu Phung</h3>
-  </div>
-  <div class="wrapper">
-    <div class id="menubar">
-      <h3>Student: Pawan Poudyel</h3>
-      <img src="images/headshot.jpeg" alt="My headshot" width="50">
-      <div id="email" onclick="showhideEmail()">Show my email</div>
-      <script src="email.js"></script>
+
+<body>
+  <div class="container-fluid wrapper">
+    <div class="main-content-wrapper">
+      <div class="container-fluid">
+        <div class="top-bar text-center position-relative">
+          <div class="top-bar-inner">
+            <a class="btn btn-primary top-bar-cta" href="https://github.com/pawanpoudyel/pawanpoudyel.github.io">Public Repo</a>
+
+            <!--links-->
+            <ul class="social-list list-inline mx-auto">
+              <li class="list-inline-item">
+                <a href="https://github.com/pawanpoudyel" aria-label="GitHub">
+                  <i class="fa-brands fa-github fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/pawan-poudyel/" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://pawanpoudyel.github.io/" aria-label="Website">
+                  <i class="fa-solid fa-globe fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-wrapper mx-auto rounded-2">
+          <div class="resume-header px-4 px-lg-5">
+            <div id="menubar" class="resume-profile-holder text-center">
+              <img src="images/headshot.jpeg"
+                   class="img-circle resume-profile-pic rounded-circle"
+                   alt="My headshot"
+                   width="150">
+
+              <h2 class="resume-name text-uppercase">Pawan Poudyel</h2>
+
+              <div class="resume-role-title text-uppercase">
+                Student | Front-end Web Development Lab
+              </div>
+
+              <div class="resume-contact mt-4">
+                <ul class="resume-contact-list list-unstyled list-inline mb-0 justify-content-between">
+                  <li class="list-inline-item me-md-3 me-lg-5">
+                    <i class="resume-contact-icon bi bi-person me-2"></i>
+                    <h3 style="display: inline; font-size: 1rem;">
+                      Student: Pawan Poudyel
+                    </h3>
+                  </li>
+
+                  <li class="list-inline-item me-md-3 me-lg-5">
+                    <i class="resume-contact-icon bi bi-envelope me-2"></i>
+                    <span id="email" onclick="showhideEmail()">Show my email</span>
+                    <script src="email.js"></script>
+                  </li>
+
+                  <li class="list-inline-item">
+                    <i class="resume-contact-icon bi bi-book me-2"></i>
+                    WAPH
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-body p-4 p-lg-5">
+            <div class="row">
+
+              <div id="main" class="col-main col-12 col-lg-8 pe-lg-4">
+
+                <section class="resume-summary-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-person me-2"></i>
+                    About Me
+                  </h3>
+
+                  <!-- Replace this placeholder paragraph with your own About Me information. -->
+                  <div class="resume-summary-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                    natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus.
+                  </div>
+                </section>
+
+                <hr>
+
+                <section id="top" class="resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-mortarboard me-2"></i>
+                    Course Information
+                  </h3>
+
+                  <div class="lab-card">
+                    <h1 class="course-title">
+                      Web Application Programming and Hacking
+                    </h1>
+
+                    <h2 class="course-subtitle">
+                      Front-end Web Development Lab
+                    </h2>
+
+                    <h3 class="course-subtitle">
+                      Instructor: Dr. Phu Phung
+                    </h3>
+                  </div>
+                </section>
+
+                <hr>
+
+                <section class="resume-experience-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-code-slash me-2"></i>
+                    Lab Exercises
+                  </h3>
+
+                  <div class="resume-timeline position-relative">
+
+                    <article class="resume-timeline-item position-relative pb-5">
+                      <div class="resume-timeline-item-header mb-2">
+                        <h3 class="resume-position-title mb-1">
+                          Digital Clock
+                        </h3>
+                      </div>
+
+                      <div class="lab-card">
+                        <div id="digital-clock">clock</div>
+
+                        <script>
+                          function displayTime(){
+                            document.getElementById('digital-clock').innerHTML = "Current time: " + new Date();
+                          }
+                          setInterval(displayTime, 500);
+                        </script>
+                      </div>
+                    </article>
+
+                    <article class="resume-timeline-item position-relative pb-5">
+                      <div class="resume-timeline-item-header mb-2">
+                        <h3 class="resume-position-title mb-1">
+                          <b>Interactions with forms</b>
+                        </h3>
+                      </div>
+
+                      <div class="lab-card">
+                        <div>
+                          <i>Form with an HTTP GET Request</i>
+
+                          <form action="/echo.php" method = "GET">
+                            Your input:
+                            <input name="data" onkeyup="console.log('you have pressed a key')">
+                            <input type="submit" value="Submit">
+                          </form>
+
+                          <i>Form with an HTTP POST Request</i>
+
+                          <form action="/echo.php" method = "POST">
+                            Your input:
+                            <input name="data" onkeyup="console.log('you have pressed a key')">
+                            <input type="submit" value="Submit">
+                          </form>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="resume-timeline-item position-relative pb-5">
+                      <div class="resume-timeline-item-header mb-2">
+                        <h3 class="resume-position-title mb-1">
+                          Date and Analog Clock
+                        </h3>
+                      </div>
+
+                      <div class="lab-card">
+                        <div id="date"
+                             onclick="document.getElementById('date').innerHTML = Date()">
+                          Show Date()
+                        </div>
+
+                        <canvas id="analog-clock"
+                                width="150"
+                                height="150"
+                                style="background-color:#999;"></canvas>
+
+                        <script src="https://waph-phung.github.io/clock.js"></script>
+
+                        <script>
+                          var canvas = document.getElementById("analog-clock");
+                          var ctx = canvas.getContext("2d");
+                          var radius = canvas.height / 2;
+                          ctx.translate(radius, radius);
+                          radius = radius * 0.90;
+                          setInterval(drawClock, 1000);
+
+                          function drawClock() {
+                              drawFace(ctx, radius);
+                              drawNumbers(ctx, radius);
+                              drawTime(ctx, radius);
+                          }
+                        </script>
+                      </div>
+                    </article>
+
+                    <article class="resume-timeline-item position-relative pb-5">
+                      <div class="resume-timeline-item-header mb-2">
+                        <h3 class="resume-position-title mb-1">
+                          AJAX Requests
+                        </h3>
+                      </div>
+
+                      <div class="lab-card">
+                        <div>
+                          <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                                  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                                  crossorigin="anonymous"></script>
+
+                          <i>AJAX Request</i>
+
+                          Your input:
+                          <input name="data"
+                                 id="data"
+                                 onkeyup="console.log('you have pressed a key')">
+
+                          <input class="button round"
+                                 type="button"
+                                 value="Ajax Echo"
+                                 onclick="getEcho()">
+
+                          <input class="button round"
+                                 type="button"
+                                 value="jQuery Ajax GET Echo"
+                                 onclick="jQueryAjax()">
+
+                          <input class="button round"
+                                 type="button"
+                                 value="jQuery Ajax POST Echo"
+                                 onclick="jQueryAjaxPost()">
+
+                          <div id="response"></div>
+
+                          <script>
+                            function isInvalidInput(input) {
+                              input = input.trim();
+
+                              if (input.length == 0) {
+                                alert("Input can't be blank.");
+                                return true;
+                              }
+
+                              if (input.includes("<") || input.includes(">")) {
+                                alert("HTML code is not allowed.");
+                                return true;
+                              }
+
+                              //only letters, numbers, spaces, and simple punctuation
+                              var allowedPattern = /^[a-zA-Z0-9 .,!?'_-]+$/;
+
+                              if (!allowedPattern.test(input)) {
+                                alert("Input contains invalid characters.");
+                                return true;
+                              }
+
+                              return false;
+                            }
+                          </script>
+
+                          <script>
+                            if (isInvalidInput(input)) {
+                              return;
+                            }
+
+                            var xhttp = new XMLHttpRequest();
+
+                            xhttp.onreadystatechange = function() {
+                                if (this.readyState == 4 &&
+                                    this.status == 200) {
+                                    console.log("Received data=" + xhttp.responseText);
+                                    document.getElementById("response").innerText =
+                                        "Response from server:" + xhttp.responseText;
+                                    //show the data
+                                }
+                            }
+
+                            xhttp.open("GET", "echo.php?data=" + encodeURIComponent(input), true);
+                            //create an Ajax request
+                            xhttp.send(); //send the request
+                            document.getElementById("data").value = "";
+                          </script>
+
+                          <script>
+                            function jQueryAjax() {
+                              var input = $("#data").val();
+                              if (isInvalidInput(input)) {
+                                return;
+                              }
+
+                              $.get("echo.php?data=" + input,
+                                  function(result) {
+                                      $("#response").html("Response from server:" + result);
+                                  }
+                              );
+
+                              $("#data").val("");
+                            }
+                          </script>
+
+                          <script>
+                            function jQueryAjaxPost() {
+                              var input = $("#data").val();
+                              if (isInvalidInput(input)) {
+                                return;
+                              }
+
+                              $.post("echo.php",
+                              { data: input},
+                                  function(result) {
+                                      $("#response").html("Response from server:" + result);
+                                  }
+                              );
+
+                              $("#data").val("");
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="resume-timeline-item position-relative pb-5">
+                      <div class="resume-timeline-item-header mb-2">
+                        <h3 class="resume-position-title mb-1">
+                          Web API Joke
+                        </h3>
+                      </div>
+
+                      <div class="lab-card">
+                        <div>
+                          <i>Web API Joke</i>
+                          <div id="joke">Joke: </div>
+
+                          <script>
+                            $(document).ready(function() {
+                              $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
+                                function(result) {
+                                  $("#joke").text("Joke: " + result.joke);
+                                }
+                              );
+                            });
+                          </script>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="resume-timeline-item position-relative">
+                      <div class="resume-timeline-item-header mb-2">
+                        <h3 class="resume-position-title mb-1">
+                          Fetch API Request
+                        </h3>
+                      </div>
+
+                      <div class="lab-card">
+                        <div>
+                          <i>Fetch API Request</i>
+
+                          name:
+                          <input id="name"
+                                 onkeyup="console.log('you have pressed a key')">
+
+                          <input class="button round"
+                                 type="button"
+                                 value="Guess Age"
+                                 onclick="guessAge()">
+
+                          <div id="age-response"></div>
+
+                          <script>
+                            function guessAge() {
+                              var input = document.getElementById("name").value;
+                              if (isInvalidInput(input)) {
+                                return;
+                              }
+
+                              fetch("https://api.agify.io/?name=" + input)
+                                .then(response => response.json())
+                                .then(result => {
+                                  document.getElementById("age-response").innerHTML =
+                                    "Name: " + result.name + "<br>" +
+                                    "Age: " + result.age + "<br>" +
+                                    "Count: " + result.count;
+                                });
+
+                              document.getElementById("name").value = "";
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </article>
+
+                  </div>
+                </section>
+
+                <hr>
+
+                <section class="resume-experience-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-briefcase me-2"></i>
+                    Work Experience
+                  </h3>
+
+                  <!-- Replace this placeholder experience with your own information. -->
+                  <div class="resume-timeline position-relative">
+                    <article class="resume-timeline-item position-relative">
+                      <div class="resume-timeline-item-header mb-2">
+                        <div class="resume-position-meta d-flex justify-content-between mb-1">
+                          <div class="resume-position-time">Year - Year</div>
+                          <div class="resume-company-name">Company Name</div>
+                        </div>
+
+                        <h3 class="resume-position-title mb-1">
+                          Position Title
+                        </h3>
+                      </div>
+
+                      <div class="resume-timeline-item-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Praesent nec semper eros. Aliquam quis turpis sed metus
+                        mollis luctus vitae rhoncus mi.
+                      </div>
+                    </article>
+                  </div>
+                </section>
+              </div>
+
+              <div class="col-12 col-lg-4 ps-lg-4">
+
+                <section class="resume-skills-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-gear me-2"></i>
+                    Tech Stack
+                  </h3>
+
+                  <!-- Change these skills and percentages to match your experience. -->
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <div class="resume-skill-name">HTML</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar resume-progress-bar"
+                             style="width: 90%"></div>
+                      </div>
+                    </li>
+
+                    <li class="mb-2">
+                      <div class="resume-skill-name">CSS and Bootstrap</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar resume-progress-bar"
+                             style="width: 80%"></div>
+                      </div>
+                    </li>
+
+                    <li class="mb-2">
+                      <div class="resume-skill-name">JavaScript</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar resume-progress-bar"
+                             style="width: 75%"></div>
+                      </div>
+                    </li>
+
+                    <li class="mb-2">
+                      <div class="resume-skill-name">AJAX and Web APIs</div>
+                      <div class="progress resume-progress">
+                        <div class="progress-bar resume-progress-bar"
+                             style="width: 70%"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+
+                <hr>
+
+                <section class="resume-skills-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-person-gear me-2"></i>
+                    Lab Topics
+                  </h3>
+
+                  <ul class="list-inline">
+                    <li class="list-inline-item">
+                      <span class="badge resume-skill-badge">HTML Forms</span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="badge resume-skill-badge">JavaScript</span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="badge resume-skill-badge">jQuery</span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="badge resume-skill-badge">AJAX</span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="badge resume-skill-badge">Fetch API</span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="badge resume-skill-badge">Input Validation</span>
+                    </li>
+                  </ul>
+                </section>
+
+                <hr>
+
+                <section class="resume-projects-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-code-slash me-2"></i>
+                    Projects
+                  </h3>
+
+                  <div class="item">
+                    <h4 class="item-heading">
+                      <i class="item-icon bi bi-square-fill me-2"></i>
+                      <a href="#">WAPH Front-end Lab</a>
+                    </h4>
+
+                    <div class="item-desc">
+                      A front-end development lab demonstrating forms, clocks,
+                      AJAX, jQuery, input validation, and external web APIs.
+                    </div>
+                  </div>
+
+                  <!-- Replace this placeholder project with another project. -->
+                  <div class="item">
+                    <h4 class="item-heading">
+                      <i class="item-icon bi bi-square-fill me-2"></i>
+                      <a href="#">Project Name</a>
+                    </h4>
+
+                    <div class="item-desc">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                  </div>
+                </section>
+
+                <hr>
+
+                <section class="resume-educate-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-book me-2"></i>
+                    Education
+                  </h3>
+
+                  <!-- Replace this placeholder with your education information. -->
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <div class="resume-degree font-weight-bold">
+                        Degree or Program
+                      </div>
+                      <div class="resume-degree-org">
+                        University or School Name
+                      </div>
+                      <div class="resume-degree-time">
+                        Start Year - End Year
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+
+                <hr>
+
+                <section class="resume-lang-section resume-section">
+                  <h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+                    <i class="resume-section-heading-icon bi bi-translate me-2"></i>
+                    Languages
+                  </h3>
+
+                  <!-- Replace these placeholder languages if necessary. -->
+                  <ul class="list-unstyled resume-lang-list">
+                    <li class="mb-2">
+                      <div class="resume-lang-name">English</div>
+                    </li>
+                    <li class="mb-2">
+                      <div class="resume-lang-name">Nepali</div>
+                    </li>
+                  </ul>
+                </section>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div id="main">
-      <div id="digital-clock">clock</div>
-        <script>
-          function displayTime(){
-            document.getElementById('digital-clock').innerHTML = "Current time: " + new Date();
-          }
-          setInterval(displayTime, 500);
-        </script>
-
-        <b>Interactions with forms</b>
-        <div>
-          <i>Form with an HTTP GET Request</i>
-          <form action="/echo.php" method = "GET">
-            Your input: <input name="data" onkeyup="console.log('you have pressed a key')">
-            <input type="submit" value="Submit">
-          </form>
-          <i>Form with an HTTP POST Request</i>
-          <form action="/echo.php" method = "POST">
-            Your input: <input name="data" onkeyup="console.log('you have pressed a key')">
-            <input type="submit" value="Submit">
-          </form>
-        </div>
-
-        <div id="date" onclick="document.getElementById('date').innerHTML = Date()">Show Date()</div>
-        <canvas id="analog-clock" width="150" height="150" style="background-color:#999;"></canvas>
-        <script src="https://waph-phung.github.io/clock.js"></script>
-        <script>
-          var canvas = document.getElementById("analog-clock");
-          var ctx = canvas.getContext("2d");
-          var radius = canvas.height / 2;
-          ctx.translate(radius, radius);
-          radius = radius * 0.90;
-          setInterval(drawClock, 1000);
-
-          function drawClock() {
-              drawFace(ctx, radius);
-              drawNumbers(ctx, radius);
-              drawTime(ctx, radius);
-          }
-        </script>
-        <div>
-          <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-          <i>AJAX Request</i>
-            Your input: <input name="data" id="data" onkeyup="console.log('you have pressed a key')">
-            <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
-            <input class="button round" type="button" value="jQuery Ajax GET Echo" onclick="jQueryAjax()">
-            <input class="button round" type="button" value="jQuery Ajax POST Echo" onclick="jQueryAjaxPost()">
-            <div id="response"></div>
-            <script>
-              function isInvalidInput(input) {
-                input = input.trim();
-
-                if (input.length == 0) {
-                  alert("Input can't be blank.");
-                  return true;
-                }
-
-                if (input.includes("<") || input.includes(">")) {
-                  alert("HTML code is not allowed.");
-                  return true;
-                }
-
-                //only letters, numbers, spaces, and simple punctuation
-                var allowedPattern = /^[a-zA-Z0-9 .,!?'_-]+$/;
-
-                if (!allowedPattern.test(input)) {
-                  alert("Input contains invalid characters.");
-                  return true;
-                }
-
-                return false;
-              }
-            </script>
-            <script>
-              if (isInvalidInput(input)) {
-                return;
-              }
-
-              var xhttp = new XMLHttpRequest();
-
-              xhttp.onreadystatechange = function() {
-                  if (this.readyState == 4 &&
-                      this.status == 200) {
-                      console.log("Received data=" + xhttp.responseText);
-                      document.getElementById("response").innerText =
-                          "Response from server:" + xhttp.responseText;
-                      //show the data
-                  }
-              }
-
-              xhttp.open("GET", "echo.php?data=" + encodeURIComponent(input), true);
-              //create an Ajax request
-              xhttp.send(); //send the request
-              document.getElementById("data").value = "";
-            </script>
-            <script>
-              function jQueryAjax() {
-                var input = $("#data").val();
-                if (isInvalidInput(input)) {
-                  return;
-                }
-
-                $.get("echo.php?data=" + input,
-                    function(result) {
-                        $("#response").html("Response from server:" + result);
-                    }
-                );
-
-                $("#data").val("");
-              }
-            </script>
-            <script>
-              function jQueryAjaxPost() {
-                var input = $("#data").val();
-                if (isInvalidInput(input)) {
-                  return;
-                }
-
-                $.post("echo.php",
-                { data: input},
-                    function(result) {
-                        $("#response").html("Response from server:" + result);
-                    }
-                );
-
-                $("#data").val("");
-              }
-            </script>
-        </div>
-        <div>
-          <i>Web API Joke</i>
-          <div id="joke">Joke: </div>
-          <script>
-          $(document).ready(function() {
-            $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
-              function(result) {
-                $("#joke").text("Joke: " + result.joke);
-              }
-            );
-          });
-        </script>
-        <div>
-          <i>Fetch API Request</i>
-           name: <input id="name" onkeyup="console.log('you have pressed a key')">
-          <input class="button round" type="button" value="Guess Age" onclick="guessAge()">
-          <div id="age-response"></div>
-          <script>
-          function guessAge() {
-            var input = document.getElementById("name").value;
-            if (isInvalidInput(input)) {
-              return;
-            }
-
-            fetch("https://api.agify.io/?name=" + input)
-              .then(response => response.json())
-              .then(result => {
-                document.getElementById("age-response").innerHTML =
-                  "Name: " + result.name + "<br>" +
-                  "Age: " + result.age + "<br>" +
-                  "Count: " + result.count;
-              });
-
-            document.getElementById("name").value = "";
-          }
-        </script>
-        </div>
-        </div>
-    </div>
   </div>
-</div>
-<body></body>
+</body>
 </html>
