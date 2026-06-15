@@ -210,7 +210,7 @@
 
               <h2 class="resume-name text-uppercase">Pawan Poudyel</h2>
               <div class="resume-role-title text-uppercase">
-                Software Engineering | Resume
+                Software Engineer | Resume
               </div>
 			  <div id="digital-clock">clock</div>
 				<script>
@@ -289,7 +289,7 @@
                           <div class="resume-company-name">LCS</div>
                         </div>
                         <h3 class="resume-position-title mb-1">
-                          Software Developer
+                          Software Developer Co-Op
                         </h3>
                       </div>
                       <li>Developed and optimized REST APIs and portal features</li>
@@ -314,17 +314,19 @@
                   </div>
                 </section>
 				<section>
+					<h3 class="resume-section-heading text-uppercase py-2 py-lg-3">
+						<span class="resume-section-heading-icon me-2">
+							<i class="fa-solid fa-user"></i>
+						</span>
+						Age Guesser
+					</h3>
 					<div>
-						<i>Fetch API Request</i>
-						name: <input id="name" onkeyup="console.log('you have pressed a key')">
+						Name: <input id="name" onkeyup="console.log('you have pressed a key')">
 						<input class="button round" type="button" value="Guess Age" onclick="guessAge()">
 						<div id="age-response"></div>
 						<script>
 						function guessAge() {
 							var input = document.getElementById("name").value;
-							if (isInvalidInput(input)) {
-							return;
-							}
 
 							fetch("https://api.agify.io/?name=" + input)
 							.then(response => response.json())
