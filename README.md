@@ -38,69 +38,101 @@ Hands-on hacking exercises
 
 ### Team Project
 
-# Lab 2 - Front-end Web Development 
+# Personal Project 1 - Professional Profile Website on github.io cloud service   
+
+[Template used for website](https://themes.3rdwavemedia.com/bootstrap-templates/resume/risen-free-bootstrap-5-dark-mode-resume-cv-template-for-developers/).  
 
 ## Overview and Requirements 
 
-In lab 2 we are going to do some basic front end web development. We will first make a basic html website with forms and javascript.
-Using javascript we will run some basic javascript functions and get the for example the time and date. Then in the second half of
-the lab we will use ajax to run GET and POST API requests asynchronously. We will also format our html website using CSS.
-Finally we will integrate a Web API using ajax to display a random joke.
+For individual project 1, we will further build on what we learned in lab2 and create a
+personal page for employers. We will use a JavaScript script framework to make a professional
+website and include elements from lab 2 and add new public API integrations.
 
 [https://github.com/pawanpoudyel/pawanpoudyel.github.io](https://github.com/pawanpoudyel/pawanpoudyel.github.io).
 
 ### Task 1: Technical Page Requirements 1
 
-I created a file called waph-poudyepn.html and wrote basic html code to make a website that displays my information, has forms,
-a button to show my email, and the date and time. For the forms the php file from lab1 was reused.
+The first requirement is for us to use jQuery and a JavaScript framework/library for our personal website.
 
-####  a. HTML (5 pts) 
+####  a. jQuery
 
-NOTE: Almost all of the screenshots were taken after completing the lab
+Here is an example of me using jQuery for calling an API that gives you a random code
 
-This is what the html website looks like wiht my info and headshot
-![HTML website with basic info and headshot](images/screenshot1.a.png)
+![Code screenshot of $.get() jQuery request](images/screenshot1.png)  
 
-![HTML code with basic information](images/screenshot1.ab.png)
+Here is a joke it got about being a self-taught developer
+
+![This is the joke it generated, it gets a new joke every 60 seconds](images/screenshot2.png)
   
-####  b. Simple JavaScript (15 pts)
+####  b. Code from Lab 2
 
-This is the code I wrote to display the clock and forms for my website
+For this section I had to include parts from lab 2 like my
+digital clock, analog clock, show/hide email, and another
+functionality from lab 2.  
 
-![Code for clock and basic forms](images/screenshot1.b.png)
+Here you can see the analog clock, digital clock, and show
+email button which has been copy/pasted from lab 2.
 
-Image shows the clock and email on the website
+![digital clock, analog clock, show/hide email on website](images/screenshot3.png)
 
-![Displayed clock and email on html website using javascript](images/screenshot2.1_outcome.png)
+Image here shows the Age Guesser which is the extra
+functionality I added from lab 2  
+
+![Age Guesser on Website](images/screenshot4.png)
 
 ### Task 2: Technical Page Requirements 2
 
-In task 2, I used an ajax javascript script in html to get and print out when the user preses down on a key and I also
-used the echo.php from lab 1 to send an ajax get request and display the result. Next I used CSS to format my html website
-and used the jQuery library to send GET requests, and did some web API integration by print out random jokes.
+For technical requirements 2 I need had to add 2 public web APIs,
+one of them had to be the jokeAPI and for the other one I decided
+to use the dog API that gets a random picture of a dog.
 
 
-####  a. Ajax (7.5 pts)
+####  a. Two Public Web APIs
 
-Here is the code I used to detect and log when a user presses a key
+Here is the jokeAPI from lab 2 that gets a new joke every 60 seconds  
 
-### Task 3: Technical Page Requirements 3
+![jokeAPI from Lab 2 code](images/screenshot1.png)  
 
-I created a file called waph-poudyepn.html and wrote basic html code to make a website that displays my information, has forms,
-a button to show my email, and the date and time. For the forms the php file from lab1 was reused.
+Here is a joke it got about on my website 
 
-####  a. HTML (5 pts) 
+![This is the joke it generated, it gets a new joke every 60 seconds](images/screenshot2.png)  
 
-NOTE: Almost all of the screenshots were taken after completing the lab
+This is the public dog web API I decided to use which get a
+random picture of a dog each time you load into the website  
 
-This is what the html website looks like wiht my info and headshot
-![HTML website with basic info and headshot](images/screenshot1.a.png)
+![Public web dogAPI code](images/screenshot5.png)  
+
+Here you can see the 2 different pictures it got when I loaded
+the page from 2 tabs. And here you can also see how the page gets
+resized to fit the smaller window from using the framework.
+
+![Image of 2 different dogs on website](images/screenshot6.png)  
+
+
+### Task 3: Technical Page Requirements 3  
+
+For the last requirement I needed to use cookies to remember a user
+a display a message on my webpage depending on how many times the page
+has already been visited.  
+
+####  a. JavaScript to Remember User 
+
+Here is my JavaScript that I used to remember the user and display
+a different message each time.
+
+![Cookies code for remembering user](images/screenshot7.png)  
+
+The Image below shows what message a first time user sees and
+also what a returning user would see.
+
+![2 different message, 1 for first time other one for returning user](images/screenshot8.png)
 
 ### Outcomes
 
-From this lab I learned more about building front-end apps using HTML, CSS, Javascript (with jQuery and aJax), and Web APIs. I built a basic website that displayed my
-information and had forms with a clock. I made GET and POST requests by reusing the .php file from lab 1.  But overall I mostly felt like this was review since I
-have done similar things during my co-op but we did not use jQuery and aJax.
+From this personal project we put everything we have learned in the course so far to create
+a personal website that employers can look at to learn more about us and potentially get a
+job offer. Creating the website required using HTML/CSS, JavaScript(jQuery and aJax),
+public WebAPIs, and a CSS framework.
 
 ## Report and deliverables
 
