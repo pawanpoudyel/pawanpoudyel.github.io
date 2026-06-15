@@ -34,13 +34,11 @@ Hands-on hacking exercises
 
 ### Individual Projects
 
-- [Personal Page](/index.html): Personal Project 1
+- [Personal Page](/README.md): Personal Project 1's Report
 
 ### Team Project
 
-# Personal Project 1 - Professional Profile Website on github.io cloud service   
-
-[Template used for website](https://themes.3rdwavemedia.com/bootstrap-templates/resume/risen-free-bootstrap-5-dark-mode-resume-cv-template-for-developers/).  
+# Personal Project 1 - Professional Profile Website on github.io cloud service  
 
 ## Overview and Requirements 
 
@@ -48,7 +46,9 @@ For individual project 1, we will further build on what we learned in lab2 and c
 personal page for employers. We will use a JavaScript script framework to make a professional
 website and include elements from lab 2 and add new public API integrations.
 
-[https://github.com/pawanpoudyel/pawanpoudyel.github.io](https://github.com/pawanpoudyel/pawanpoudyel.github.io).
+[https://github.com/pawanpoudyel/pawanpoudyel.github.io](https://github.com/pawanpoudyel/pawanpoudyel.github.io)  
+
+[Template used for website](https://themes.3rdwavemedia.com/bootstrap-templates/resume/risen-free-bootstrap-5-dark-mode-resume-cv-template-for-developers/)
 
 ### Task 1: Technical Page Requirements 1
 
