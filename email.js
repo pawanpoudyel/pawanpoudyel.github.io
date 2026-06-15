@@ -6,7 +6,7 @@ function showhideEmail(){
         shown = false;
     }else{
         var myemail = "<a href='mailto:poudyepn" + "@" +
-            "mail.uc.edu'>poudyepn-waph" + "@" + "outlook.com</a>";
+            "mail.uc.edu'>poudyepn" + "@" + "mail.uc.edu</a>";
         document.getElementById('email').innerHTML = myemail;
         shown = true;
     }
