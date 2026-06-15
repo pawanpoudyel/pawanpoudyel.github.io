@@ -10,7 +10,7 @@
 
 **Short-bio**: Pawan Poudyel is intrested in software development and has co-oped at LCS for 3 rotations.
 
-<img src ="https://github.com/pawanpoudyel/waph-pawanpoudyel/blob/main/headshot.jpeg" alt="Pawan's Headshot" width="150" height="150">
+![Pawan's Headshot](../../headshot.jpeg){ width=150px height=150px }
 
 ## Repository Information
 
